@@ -186,7 +186,8 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      d3 剛開始學的時候確實很難搞懂他的邏輯在哪，設計古怪，重點是每個版本的語法會有不少差異，任何教學以及教材
+      d3 剛開始學的時候確實很難搞懂他的邏輯在哪，設計古怪，重點是每個版本的語法會有不少差異，任何教學以及教材都不一定可以相信，包括老師的教材也是過期了，所以上課根本不用聼，學到的東西用不到。
+      Strong Baseline D3 畫廊的部分，我選擇用 bar chart 來呈現成績表，Y 軸為每個人的名字，x軸為縂作業成績，每份作業成績都用一小塊色塊表示。
     </div>
   </div>
 
@@ -209,7 +210,7 @@
         <tr>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
           <td id='m2'>2</td>
-          <td>Simple baseline - 繪製 v3 蘋果成績表</td>
+          <td>Medium baseline - 繪製 v3 蘋果成績表</td>
         </tr>
         <tr>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox3" checked></td>
@@ -279,6 +280,10 @@
 
     if (d3.select("#myCheckbox3").property("checked")){
       score += parseInt(d3.select('#m3').html());   
+    }
+
+    if (d3.select("#myCheckbox4").property("checked")){
+      score += parseInt(d3.select('#m4').html());   
     }
 
     d3.select("#myTotal").html(score);    
