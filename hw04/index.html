@@ -178,17 +178,21 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      該次作業程式碼，請放在 https://github.com/<span style="color:red;">你的帳號</span>/vis2023f/hw<span style="color:red;">04</span>/src/ 檔案夾。
-    </div>
+      <a href="https://hengweibin.github.io/vis2023f/hw04/src-sunburst/">src-sunburst/</a>
+      <hr>
+      <!-- <a href="https://你的帳號.github.io/vis2023f/hw04/src-strong/">https://你的帳號.github.io/vis2023f/hw04/src-strong/</a> -->
+      </div>
   </div>
+
 
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。
+      這次的作業是要聯係使用 D3 Observable 中的旭日圖將問卷調查結果進行可視化，最後再加入互動功能，讓使用者可以透過點擊來查看不同的資料等等。旭日圖中我選用了淺色系來表達，每個顔色代表不同的藝術工作者及他們有採取得減少碳排放行動。編輯器超難用，有礙學習，不做 Strong Baseline
     </div>
   </div>
 
+  <!-- ------------------------------------------------>
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
@@ -201,30 +205,41 @@
         </tr>
         <tr>
           <td rowspan="7" id="myTotal"></td>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox1"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox1" checked="checked"></td>
           <td id='m1'>2</td>
-          <td>Simple baseline - 描述、描述、描述</td>
+          <td>Simple baseline 1 - 完成旭日圖</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
-          <td id='m2'>6</td>
-          <td>Medium baseline - 描述、描述、描述 </td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked="checked"></td>
+          <td id='m2'>1</td>
+          <td>Simple baseline 2 - 完成頁面路徑</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox3"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox3" checked="checked"></td>
           <td id='m3'>2</td>
-          <td>Strong baseline - 描述、描述、描述 </td>
+          <td>Medium baseline 1 - 加入Tooltip </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox4" checked="checked"></td>
+          <td id='m4'>2</td>
+          <td>Medium baseline 2 - 完成結論 </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox5"></td>
+          <td id='m5'>3</td>
+          <td>Strong baseline - 將兩個問題之間的意義以圖表呈現(可互動) </td>
         </tr>
       </table>
     </div>
   </div>
 
+
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      <video id="video1" style="width:100%;max-width:100%;" controls="">
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-      </video>
+      <h1>Simple and medium baseline</h1>
+      <hr>
+      <iframe style="background-color: white;" width="100%" height="500" frameborder="0" src="https://observablehq.com/embed/bd31eb33b74b9bb3@80?cell=*"></iframe>
     </div>
   </div>
 
@@ -265,6 +280,14 @@
 
     if (d3.select("#myCheckbox3").property("checked")){
       score += parseInt(d3.select('#m3').html());   
+    }
+
+    if (d3.select("#myCheckbox4").property("checked")){
+      score += parseInt(d3.select('#m4').html());   
+    }
+
+    if (d3.select("#myCheckbox5").property("checked")){
+      score += parseInt(d3.select('#m5').html());   
     }
 
     d3.select("#myTotal").html(score);    
