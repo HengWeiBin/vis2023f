@@ -1,0 +1,14 @@
+{
+  "name": "ea66d0f693bd9f4f",
+  "main": "ea66d0f693bd9f4f@198.js",
+  "version": "198.0.0",
+  "homepage": "https://observablehq.com/d/ea66d0f693bd9f4f",
+  "author": {
+    "name": "北科大-王偉斌's Workspace",
+    "url": "https://observablehq.com/@bei-ke-da-wang-wei-bin-ws"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}
