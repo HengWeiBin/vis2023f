@@ -1,0 +1,14 @@
+{
+  "name": "ed5b5534c2d7fc2c",
+  "main": "ed5b5534c2d7fc2c@54.js",
+  "version": "54.0.0",
+  "homepage": "https://observablehq.com/d/ed5b5534c2d7fc2c",
+  "author": {
+    "name": "北科大-王偉斌's Workspace",
+    "url": "https://observablehq.com/@bei-ke-da-wang-wei-bin-ws"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}
