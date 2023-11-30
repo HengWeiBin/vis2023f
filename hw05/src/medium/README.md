@@ -1,6 +1,6 @@
 # HW 05 Medium Baseline
 
-https://observablehq.com/d/f678a6f9fd2ffb9f@86
+https://observablehq.com/d/f678a6f9fd2ffb9f@88
 
 View this notebook in your browser by running a web server in this folder. For
 example:
@@ -14,7 +14,7 @@ import this module directly into your application. To npm install:
 
 ~~~sh
 npm install @observablehq/runtime@5
-npm install https://api.observablehq.com/d/f678a6f9fd2ffb9f@86.tgz?v=3
+npm install https://api.observablehq.com/d/f678a6f9fd2ffb9f@88.tgz?v=3
 ~~~
 
 Then, import your notebook and the runtime as:

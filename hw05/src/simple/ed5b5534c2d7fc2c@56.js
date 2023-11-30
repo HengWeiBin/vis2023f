@@ -6,26 +6,14 @@ function _data(FileAttachment){return(
 FileAttachment("output.json").json()
 )}
 
-function _mygroup(data)
-{
-  // 複製一份資料
-  let dataCopy = data;
-
-  // 過濾掉 12組以外的資料
-  dataCopy.children = dataCopy.children.filter(d => d.Group == 12)
-
-  return dataCopy;
-}
-
-
-function _tree(d3,mygroup,drag,invalidation)
+function _tree(d3,data,drag,invalidation)
 {
    // 指定圖表的尺寸。
   const width = 500;
   const height = 400;
 
   // 計算圖形並啟動力模擬。
-  const root = d3.hierarchy(mygroup);
+  const root = d3.hierarchy(data);
   const links = root.links();
   const nodes = root.descendants();
   
@@ -174,8 +162,7 @@ export default function define(runtime, observer) {
   main.builtin("FileAttachment", runtime.fileAttachments(name => fileAttachments.get(name)));
   main.variable(observer()).define(["md"], _1);
   main.variable(observer("data")).define("data", ["FileAttachment"], _data);
-  main.variable(observer("mygroup")).define("mygroup", ["data"], _mygroup);
-  main.variable(observer("tree")).define("tree", ["d3","mygroup","drag","invalidation"], _tree);
+  main.variable(observer("tree")).define("tree", ["d3","data","drag","invalidation"], _tree);
   main.variable(observer("drag")).define("drag", ["d3"], _drag);
   return main;
 }
